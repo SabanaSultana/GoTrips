@@ -13,7 +13,7 @@ export default function NavBar() {
             {
               MenuItems.map((item,index)=>{
                 return(
-                  <li key={index}>
+                  <li key={index} className={item.cName}> 
                     <a href={item.url}>
                     <i class={item.icon}></i>{item.title}
                     </a>
