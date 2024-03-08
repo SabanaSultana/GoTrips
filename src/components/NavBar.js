@@ -21,6 +21,7 @@ export default function NavBar() {
                 )
               })
             }
+            <button>Sign Up</button>
           </ul>
       </nav>
     </div>
