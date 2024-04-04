@@ -1,29 +1,26 @@
 import React from 'react'
-import "./NavBarStyle.css"
-// import MenuItems from './MenuItems'
-import {MenuItems} from './MenuItems'
-// import {Link} from "react-router-dom"
+import navData from '../NavData'
+import './Navbar.css'
 
 export default function NavBar() {
   return (
-    <div>
-      <nav className='NavbarItems'>
-          <h1 className='navbar-logo'>Trippy</h1>
-          <ul className="nav-menu">
-            {
-              MenuItems.map((item,index)=>{
-                return(
-                  <li key={index} className={item.cName}> 
-                    <a href={item.url}>
-                    <i class={item.icon}></i>{item.title}
-                    </a>
-                  </li>
-                )
-              })
-            }
-            <button>Sign Up</button>
+    <nav className=' flex flex-row my-4 mx-6  '>
+        <h1 className='title animated-text  '>GoTrips</h1>
+        {/* <div className='hamburger-menu'>
+
+        </div> */}
+          <ul className=' grow  flex flex-row   place-content-evenly  '>
+            {navData.map((navs)=>{
+              return(
+                <li className='bg-red-500'>{navs.navMenu}</li>
+              )              
+            })}
           </ul>
-      </nav>
-    </div>
+          <div className='flex flex-row justify-between mr-4 gap-4'>
+           <button className='bg-black text-white rounded-xl  px-6'>login</button>
+           <button className='border-black border-2 rounded-xl px-4'> Sign Up</button>        
+          </div>
+       
+    </nav>
   )
 }

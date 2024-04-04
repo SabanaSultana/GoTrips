@@ -1,10 +1,9 @@
 import React from 'react'
-import NavBar from './components/NavBar';
-// import { Route } from 'react-router-dom';
+import NavBar from './components/Navbar';
 function App() {
   return (
-    <div className='App'>     
-        <NavBar/>              
+    <div >     
+      <NavBar/>         
     </div>
   );
 }

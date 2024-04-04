@@ -1,0 +1,23 @@
+.title{
+    background-image: linear-gradient(45deg, #7cf817c7 , #17ef75 , #1db279 );
+    font-size: 33px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight:600;
+    font-family: "Merriweather", serif;
+
+}
+.animated-text {
+  animation: moveAndRotate 1.5s ease-in-out forwards;
+  animation-delay: 1s;
+}
+@keyframes moveAndRotate {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+  }
