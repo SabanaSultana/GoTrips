@@ -1,26 +1,28 @@
-import React from 'react'
-import navData from '../NavData'
-import './Navbar.css'
+// Navbar.js
+import React from 'react';
+import './Navbar.css';
+import { Link } from 'react-router-dom';
+import navData from './NavData';
 
 export default function NavBar() {
   return (
-    <nav className=' flex flex-row my-4 mx-6  '>
-        <h1 className='title animated-text  '>GoTrips</h1>
-        {/* <div className='hamburger-menu'>
-
-        </div> */}
-          <ul className=' grow  flex flex-row   place-content-evenly  '>
-            {navData.map((navs)=>{
-              return(
-                <li className='bg-red-500'>{navs.navMenu}</li>
-              )              
-            })}
-          </ul>
-          <div className='flex flex-row justify-between mr-4 gap-4'>
-           <button className='bg-black text-white rounded-xl  px-6'>login</button>
-           <button className='border-black border-2 rounded-xl px-4'> Sign Up</button>        
-          </div>
-       
-    </nav>
-  )
+    <div className='navbar z-10 bg-gray-200 rounded-lg'>
+      <h1 className='title animated-text'>GoTrips</h1>
+      <ul className='nav-links'>
+        {navData.map((navs) => (
+          <li key={navs.url}>
+            <Link to={navs.url}>{navs.navMenu}</Link>
+          </li>
+        ))}
+      </ul>
+      <div className='auth-buttons'>
+        <Link to='/login'>
+          <button className='login-button'>Login</button>
+        </Link>
+        <Link to='/signup'>
+          <button className='signup-button'>Sign Up</button>
+        </Link>
+      </div>
+    </div>
+  );
 }
