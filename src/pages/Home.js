@@ -1,16 +1,23 @@
 import React from 'react'
 import './Home.css'
-
+import About from './About'
+import Destinations from '../components/Destinations'
 export default function Home() {
   return (
-    <div className='header bg-sky-950 z-(-10) relative'>
-      {/* <div className='sub-header1 container bg-green-500 '> */}
-       <div className='gradient bg-red-500'>Hii</div>
-       <img src='https://www.hdwallpapers.in/download/paris_eiffel_tower_france_with_blue_sky_background_hd_travel-HD.jpg' alt="Error loading image" className='img ' />
-        Hii there sabana here 
-      {/* </div> */}
-      <div className='sub-header2'>
-        Hii I am 
+    <div className='homepage bg-sky-200 z-(-10) relative'>
+      <div className="header content">
+            <h1 className='content-title'> Hello Adventurer! Welcome to GoTrips</h1>
+            <h1 className='content-title'>Your Ultimate Travel Companion</h1>        
+      </div>
+      <div className="destinations">
+       <h1> Where would you like to travel?</h1>
+        <Destinations/>
+      </div>
+      <div>
+        <About/>
+      </div>
+      <div className="footer">
+        footer
       </div>
     </div>
   )
